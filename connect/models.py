@@ -10,7 +10,7 @@ class Profile(models.Model):
         return self.bio
         
 
-# Create your models here.
+
 class Image(models.Model):
     image=models.ImageField(blank=True,null=False)
     name=models.CharField(max_length=100)
