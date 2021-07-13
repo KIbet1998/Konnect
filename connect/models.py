@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
@@ -22,6 +23,11 @@ class Image(models.Model):
 
     def _str_(self):
         return self.name
+
+LIKE_CHOICES=(
+    ('Like','Like'),
+    ('Unlike','Unlike')
+)
 
 class Like(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE)
